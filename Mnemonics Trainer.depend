@@ -1,15 +1,14 @@
 # depslib dependency file v1.0
-1440260632 source:/user_data/CodeProjects/learnGTK/main.c
+1456213643 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.c
+	"create_configure_screen.h"
+
+1456213762 /user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.h
 	<gtk/gtk.h>
-	"./helper/set_up_toolbar.h"
-	"./create_screens/create_configure_screen.h"
-	"./create_screens/create_study_screen.h"
-	"./create_screens/create_quiz_screen.h"
-	"./create_screens/create_score_screen.h"
-	"./helper/create_app_long_pointer.h"
-	"./helper/window.h"
-	"./helper/generate_items.h"
-	"./helper/utilities.h"
+	<stdlib.h>
+	"../helper/window.h"
+	"../helper/utilities.h"
+	"../helper/universal_variables.h"
+	"../helper/application_state.h"
 
 1449694334 /usr/include/gtk-3.0/gtk/gtk.h
 	<gdk/gdk.h>
@@ -2728,149 +2727,6 @@
 
 1449694334 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
 
-1439670272 /user_data/CodeProjects/learnGTK/set_up_toolbar.h
-	<gtk/gtk.h>
-
-1439603870 source:/user_data/CodeProjects/learnGTK/set_up_toolbar.c
-	"set_up_toolbar.h"
-
-1439839947 source:/user_data/CodeProjects/learnGTK/create_configure_screen.c
-	"create_configure_screen.h"
-
-1439794827 /user_data/CodeProjects/learnGTK/create_configure_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"create_app_long_pointer.h"
-	"window.h"
-
-1439926650 /user_data/CodeProjects/learnGTK/create_app_long_pointer.h
-	<gtk/gtk.h>
-	<stdlib.h>
-
-1439926655 source:/user_data/CodeProjects/learnGTK/create_app_long_pointer.c
-	"create_app_long_pointer.h"
-
-1439773499 /user_data/CodeProjects/learnGTK/window.h
-	<gtk/gtk.h>
-
-1439861119 source:/user_data/CodeProjects/learnGTK/window.c
-	"window.h"
-
-1439839196 /user_data/CodeProjects/learnGTK/utilities.h
-	<gtk/gtk.h>
-	<stdio.h>
-	"create_app_long_pointer.h"
-
-1439839917 source:/user_data/CodeProjects/learnGTK/utilities.c
-	"utilities.h"
-
-1439934448 source:/user_data/CodeProjects/learnGTK/generate_items.c
-	"generate_items.h"
-
-1439934426 /user_data/CodeProjects/learnGTK/generate_items.h
-	"create_configure_screen.h"
-	<time.h>
-	<stdlib.h>
-
-1440200721 source:/user_data/CodeProjects/learnGTK/helper/create_app_long_pointer.c
-	"create_app_long_pointer.h"
-
-1439938561 /user_data/CodeProjects/learnGTK/helper/create_app_long_pointer.h
-	<gtk/gtk.h>
-	<stdlib.h>
-
-1439603870 source:/user_data/CodeProjects/learnGTK/helper/set_up_toolbar.c
-	"set_up_toolbar.h"
-
-1439670272 /user_data/CodeProjects/learnGTK/helper/set_up_toolbar.h
-	<gtk/gtk.h>
-
-1439958805 source:/user_data/CodeProjects/learnGTK/helper/utilities.c
-	"utilities.h"
-
-1439939084 /user_data/CodeProjects/learnGTK/helper/utilities.h
-	<gtk/gtk.h>
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1439939447 source:/user_data/CodeProjects/learnGTK/helper/window.c
-	"window.h"
-
-1439773499 /user_data/CodeProjects/learnGTK/helper/window.h
-	<gtk/gtk.h>
-
-1440259860 source:/user_data/CodeProjects/learnGTK/create_screens/create_configure_screen.c
-	"create_configure_screen.h"
-
-1440259763 /user_data/CodeProjects/learnGTK/create_screens/create_configure_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/create_app_long_pointer.h"
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-
-1440260747 source:/user_data/CodeProjects/learnGTK/helper/generate_items.c
-	"generate_items.h"
-
-1440259706 /user_data/CodeProjects/learnGTK/helper/generate_items.h
-	"../create_screens/create_configure_screen.h"
-	<time.h>
-	<stdlib.h>
-
-1440136253 source:/user_data/CodeProjects/learnGTK/create_screens/create_study_screen.c
-	"create_study_screen.h"
-
-1440214375 /user_data/CodeProjects/learnGTK/helper/universal_variables.h
-	<gtk/gtk.h>
-
-1440195951 source:/user_data/CodeProjects/learnGTK/helper/universal_variables.c
-	"universal_variables.h"
-
-1440136451 /user_data/CodeProjects/learnGTK/create_screens/create_study_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/create_app_long_pointer.h"
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-
-1440206041 source:/user_data/CodeProjects/learnGTK/create_screens/create_quiz_screen.c
-	"create_quiz_screen.h"
-
-1440214863 /user_data/CodeProjects/learnGTK/create_screens/create_quiz_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/create_app_long_pointer.h"
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-
-1440260486 /user_data/CodeProjects/learnGTK/create_screens/create_score_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/create_app_long_pointer.h"
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-
-1440260662 source:/user_data/CodeProjects/learnGTK/create_screens/create_score_screen.c
-	"create_score_screen.h"
-
-1456213643 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.c
-	"create_configure_screen.h"
-
-1456213762 /user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-	"../helper/application_state.h"
-
-1456213623 /user_data/CodeProjects/Mnuemonics App/helper/create_app_long_pointer.h
-
 1439773499 /user_data/CodeProjects/Mnuemonics App/helper/window.h
 	<gtk/gtk.h>
 
@@ -2883,30 +2739,20 @@
 1456214149 /user_data/CodeProjects/Mnuemonics App/helper/universal_variables.h
 	<gtk/gtk.h>
 
-1456213648 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.c
-	"create_quiz_screen.h"
-
-1456213766 /user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.h
+1456210764 /user_data/CodeProjects/Mnuemonics App/helper/application_state.h
 	<gtk/gtk.h>
+	"utilities.h"
+	"universal_variables.h"
+	"generate_items.h"
+	"../create_screens/create_configure_screen.h"
+	"../create_screens/create_study_screen.h"
+	"../create_screens/create_quiz_screen.h"
+	"../create_screens/create_score_screen.h"
+
+1440259706 /user_data/CodeProjects/Mnuemonics App/helper/generate_items.h
+	"../create_screens/create_configure_screen.h"
+	<time.h>
 	<stdlib.h>
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-	"../helper/application_state.h"
-
-1456213651 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.c
-	"create_score_screen.h"
-
-1456213769 /user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.h
-	<gtk/gtk.h>
-	<stdlib.h>
-	"../helper/window.h"
-	"../helper/utilities.h"
-	"../helper/universal_variables.h"
-	"../helper/application_state.h"
-
-1456213654 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_study_screen.c
-	"create_study_screen.h"
 
 1456213771 /user_data/CodeProjects/Mnuemonics App/create_screens/create_study_screen.h
 	<gtk/gtk.h>
@@ -2916,15 +2762,36 @@
 	"../helper/universal_variables.h"
 	"../helper/application_state.h"
 
-1456213623 source:/user_data/CodeProjects/Mnuemonics App/helper/create_app_long_pointer.c
-
-1456213658 source:/user_data/CodeProjects/Mnuemonics App/helper/generate_items.c
-	"generate_items.h"
-
-1440259706 /user_data/CodeProjects/Mnuemonics App/helper/generate_items.h
-	"../create_screens/create_configure_screen.h"
-	<time.h>
+1456213766 /user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.h
+	<gtk/gtk.h>
 	<stdlib.h>
+	"../helper/window.h"
+	"../helper/utilities.h"
+	"../helper/universal_variables.h"
+	"../helper/application_state.h"
+
+1456213769 /user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.h
+	<gtk/gtk.h>
+	<stdlib.h>
+	"../helper/window.h"
+	"../helper/utilities.h"
+	"../helper/universal_variables.h"
+	"../helper/application_state.h"
+
+1456213648 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.c
+	"create_quiz_screen.h"
+
+1456213651 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.c
+	"create_score_screen.h"
+
+1456213654 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_study_screen.c
+	"create_study_screen.h"
+
+1456213089 source:/user_data/CodeProjects/Mnuemonics App/helper/application_state.c
+	"application_state.h"
+
+1456214202 source:/user_data/CodeProjects/Mnuemonics App/helper/generate_items.c
+	"generate_items.h"
 
 1456213344 source:/user_data/CodeProjects/Mnuemonics App/helper/set_up_toolbar.c
 	"set_up_toolbar.h"
@@ -2943,29 +2810,15 @@
 1439939447 source:/user_data/CodeProjects/Mnuemonics App/helper/window.c
 	"window.h"
 
-1456213631 source:/user_data/CodeProjects/Mnuemonics App/main.c
+1456213805 source:/user_data/CodeProjects/Mnuemonics App/main.c
 	<gtk/gtk.h>
 	"./helper/set_up_toolbar.h"
 	"./create_screens/create_configure_screen.h"
 	"./create_screens/create_study_screen.h"
 	"./create_screens/create_quiz_screen.h"
 	"./create_screens/create_score_screen.h"
-	"./helper/create_app_long_pointer.h"
 	"./helper/window.h"
 	"./helper/generate_items.h"
 	"./helper/utilities.h"
 	"./helper/application_state.h"
-
-1456213089 source:/user_data/CodeProjects/Mnuemonics App/helper/application_state.c
-	"application_state.h"
-
-1456210764 /user_data/CodeProjects/Mnuemonics App/helper/application_state.h
-	<gtk/gtk.h>
-	"utilities.h"
-	"universal_variables.h"
-	"generate_items.h"
-	"../create_screens/create_configure_screen.h"
-	"../create_screens/create_study_screen.h"
-	"../create_screens/create_quiz_screen.h"
-	"../create_screens/create_score_screen.h"
 
