@@ -25,7 +25,6 @@ typedef struct
 {
   char item_type;
   unsigned int item_amount;
-  unsigned int last_item_amount;
   gboolean has_repeats;
   char order;
 } configuration_settings;
@@ -74,7 +73,7 @@ char **
 get_items ();
 
 
-unsigned int
+int
 get_item_count ();
 
 #endif // UNIVERSAL_VARIABLES_H

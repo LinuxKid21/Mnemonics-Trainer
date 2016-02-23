@@ -7,11 +7,14 @@ static void
 generate_order ()
 {
   configuration_settings *settings = get_settings ();
+
   // free order_of_items if its not null
   if(order_of_items != NULL) {
-    // memory leak still!
+    free(order_of_items);
   }
-  order_of_items = malloc (sizeof (int) * settings->item_amount);
+
+
+  order_of_items = malloc (settings->item_amount * sizeof(int));
   if (settings->order == OrderBackwards && (settings->item_type == ItemTypesSimpleWords || settings->item_type == ItemTypesComplexWords) )
   {
     for(unsigned int i = 0;i < settings->item_amount; i++)
@@ -50,7 +53,7 @@ static gboolean check_for_doubles_words (int *random_list, int random_list_size,
         random_list[i] = ((double)rand()/(double)RAND_MAX)*(double)possibilities_size;
         return TRUE;
       }
-    return FALSE;
+  return FALSE;
 }
 
 static void scramble_words_list (char **random_list, int size)
@@ -68,8 +71,10 @@ static void scramble_words_list (char **random_list, int size)
 
 
 void
-generate_items_words (unsigned int random_list_size, char *file_name, const int file_length, gboolean remove_doubles)
+generate_items_words (char *file_name, const int file_length, gboolean remove_doubles)
 {
+  configuration_settings *settings = get_settings ();
+  int random_list_size = settings->item_amount;
   // erase if items is not empty
   char **items = get_items();
   if(items != NULL) {
@@ -86,14 +91,18 @@ generate_items_words (unsigned int random_list_size, char *file_name, const int 
 
   char word[largest_word_size];
 
+  /* create a list of random numbers in the range of
+     lines in the passed in file. */
   int random_list[random_list_size];
   for(int i = 0;i < random_list_size; i++)
   {
     random_list[i] = ((double)rand()/(double)RAND_MAX)*(double)file_length;
   }
 
+  /* check_for_doubles_words returns FALSE if there are no doubles,
+     but otherwise replaces doubles with something new. */
   if (remove_doubles == TRUE)
-  while (check_for_doubles_words (random_list, random_list_size, file_length) == TRUE) {}
+    while (check_for_doubles_words (random_list, random_list_size, file_length) == TRUE) {}
 
   int x = 0;
   int j = 0;

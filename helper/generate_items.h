@@ -6,9 +6,9 @@
 
 
 
-
+/* generate_items_words works with files where there is one word per line. */
 void
-generate_items_words (unsigned int random_list_size, char *file_name, const int file_length, gboolean remove_doubles);
+generate_items_words (char *file_name, const int file_length, gboolean remove_doubles);
 
 
 #endif // GENERATE_ITEMS_H

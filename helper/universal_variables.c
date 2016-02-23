@@ -96,7 +96,7 @@ get_items ()
 }
 
 
-unsigned int
+int
 get_item_count ()
 {
   return Uitem_count;

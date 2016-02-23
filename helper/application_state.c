@@ -52,11 +52,11 @@ shift_to_study_screen ()
   configuration_settings *settings = get_settings ();
 
   if(settings->item_type == ItemTypesComplexWords)
-    generate_items_words(settings->item_amount, "./dictionary.txt", 25189/* file length */, TRUE);
+    generate_items_words("./dictionary.txt", 25189/* file length */, TRUE);
   if(settings->item_type == ItemTypesSimpleWords)
-    generate_items_words(settings->item_amount, "./dictionary_small.txt", 846/* file length */, TRUE);
+    generate_items_words("./dictionary_small.txt", 846/* file length */, TRUE);
   if(settings->item_type == ItemTypesCards)
-    generate_items_words(settings->item_amount, "./cards.txt", 52/* file length */, settings->has_repeats);
+    generate_items_words("./cards.txt", 52/* file length */, settings->has_repeats);
 
 
   gtk_stack_set_visible_child_name (GTK_STACK (ptr_to_stack),
