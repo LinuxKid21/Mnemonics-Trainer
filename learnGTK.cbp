@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="learnGTK" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/learnGTK" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/learnGTK" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags gtk+-3.0`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs gtk+-3.0`" />
+		</Linker>
+		<Unit filename="create_screens/create_configure_screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="create_screens/create_configure_screen.h" />
+		<Unit filename="create_screens/create_quiz_screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="create_screens/create_quiz_screen.h" />
+		<Unit filename="create_screens/create_score_screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="create_screens/create_score_screen.h" />
+		<Unit filename="create_screens/create_study_screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="create_screens/create_study_screen.h" />
+		<Unit filename="helper/application_state.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/application_state.h" />
+		<Unit filename="helper/generate_items.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/generate_items.h" />
+		<Unit filename="helper/set_up_toolbar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/set_up_toolbar.h" />
+		<Unit filename="helper/universal_variables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/universal_variables.h" />
+		<Unit filename="helper/utilities.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/utilities.h" />
+		<Unit filename="helper/window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper/window.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,27 @@
+GtkWindow {
+background-color: #EDEDED;
+}
+
+GtkMenuBar {
+background-color: lightgrey;
+}
+
+GtkFrame {
+background-color: lightgrey;
+}
+
+
+#large_text_200 {
+font-size: 200%;
+color:#00719B;
+}
+
+
+#error {
+border-color:#FF0000;
+}
+
+
+#correct {
+border-color:#00FF00;
+}

@@ -1,0 +1,1 @@
+/user_data/CodeProjects/Mnuemonics App/dictionary_small.txt
