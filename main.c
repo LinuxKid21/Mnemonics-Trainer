@@ -1,13 +1,7 @@
 #include <gtk/gtk.h>
 
 #include "./helper/set_up_toolbar.h"
-#include "./create_screens/create_configure_screen.h"
-#include "./create_screens/create_study_screen.h"
-#include "./create_screens/create_quiz_screen.h"
-#include "./create_screens/create_score_screen.h"
 #include "./helper/window.h"
-#include "./helper/generate_items.h"
-#include "./helper/utilities.h"
 #include "./helper/application_state.h"
 
 
@@ -42,16 +36,13 @@ startup (GtkApplication *app,
   //! so we don't have to throw it around everywhere.
   set_window(window);
 
+  /* Must be called after set_window is called.
+     Sets up a gtk_stack and pushes the configure,
+     memorizer, quizer, and score screens onto it. */
+  setup_application_state ();
 
-  setup_application_state (window);
 
 
-
-
-  create_configure_screen ();
-  create_study_screen ();
-  create_quiz_screen ();
-  create_score_screen ();
 
 
 
@@ -77,8 +68,11 @@ startup (GtkApplication *app,
   gtk_widget_show_all (window);
 
 
+  /* initializes certain variables. it is not
+     placed inside setup_application_state
+     because it sets a widget invisible which
+     would only be undone by gtk_widget_show_all */
   shift_to_config_screen();
-
 }
 
 static void

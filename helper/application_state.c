@@ -3,9 +3,9 @@
 static GtkWidget *ptr_to_stack;
 
 void
-setup_application_state (GtkWidget *window) {
+setup_application_state () {
   GtkWidget *box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);;
-  gtk_container_add (GTK_CONTAINER (window), box);
+  gtk_container_add (GTK_CONTAINER (get_window()), box);
 
 
   ptr_to_stack = create_stack_400 ();
@@ -18,18 +18,27 @@ setup_application_state (GtkWidget *window) {
   gtk_box_pack_start (GTK_BOX (box), progress_bar, FALSE, FALSE, 0);
   set_progress_bar (progress_bar);
   set_progress_hidden ();
+
+
+
+
+  create_configure_screen ();
+  create_study_screen ();
+  create_quiz_screen ();
+  create_score_screen ();
 }
 
 
-GtkWidget *
-get_application_stack() {
-    return ptr_to_stack;
+void
+add_screen_onto_gtk_stack(GtkWidget *child, const char *name) {
+  gtk_stack_add_named (GTK_STACK (ptr_to_stack), child, name);
 }
+
 
 void
 shift_to_config_screen () {
 
-  gtk_stack_set_visible_child_name (GTK_STACK (get_application_stack()),
+  gtk_stack_set_visible_child_name (GTK_STACK (ptr_to_stack),
                                     "configure_screen");
 
   set_progress_hidden ();
@@ -50,7 +59,7 @@ shift_to_study_screen ()
     generate_items_words(settings->item_amount, "./cards.txt", 52/* file length */, settings->has_repeats);
 
 
-  gtk_stack_set_visible_child_name (GTK_STACK (get_application_stack()),
+  gtk_stack_set_visible_child_name (GTK_STACK (ptr_to_stack),
                                     "study_screen");
 
   set_progress_visible ();
@@ -65,7 +74,7 @@ void
 shift_to_quiz_screen ()
 {
   set_progress (0);
-  gtk_stack_set_visible_child_name (GTK_STACK (get_application_stack()),
+  gtk_stack_set_visible_child_name (GTK_STACK (ptr_to_stack),
                                     "quiz_screen");
   initialize_quiz_screen ();
 }
@@ -77,6 +86,6 @@ shift_to_score_screen ()
   initialize_score_screen ();
   set_progress (0);
   set_progress_hidden ();
-  gtk_stack_set_visible_child_name (GTK_STACK (get_application_stack()),
+  gtk_stack_set_visible_child_name (GTK_STACK (ptr_to_stack),
                                     "score_screen");
 }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1456213643 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.c
+1456248386 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.c
 	"create_configure_screen.h"
 
 1456213762 /user_data/CodeProjects/Mnuemonics App/create_screens/create_configure_screen.h
@@ -2739,11 +2739,12 @@
 1456214149 /user_data/CodeProjects/Mnuemonics App/helper/universal_variables.h
 	<gtk/gtk.h>
 
-1456210764 /user_data/CodeProjects/Mnuemonics App/helper/application_state.h
+1456248360 /user_data/CodeProjects/Mnuemonics App/helper/application_state.h
 	<gtk/gtk.h>
 	"utilities.h"
 	"universal_variables.h"
 	"generate_items.h"
+	"window.h"
 	"../create_screens/create_configure_screen.h"
 	"../create_screens/create_study_screen.h"
 	"../create_screens/create_quiz_screen.h"
@@ -2778,16 +2779,16 @@
 	"../helper/universal_variables.h"
 	"../helper/application_state.h"
 
-1456213648 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.c
+1456248409 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_quiz_screen.c
 	"create_quiz_screen.h"
 
-1456213651 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.c
+1456248397 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_score_screen.c
 	"create_score_screen.h"
 
 1456213654 source:/user_data/CodeProjects/Mnuemonics App/create_screens/create_study_screen.c
 	"create_study_screen.h"
 
-1456213089 source:/user_data/CodeProjects/Mnuemonics App/helper/application_state.c
+1456248375 source:/user_data/CodeProjects/Mnuemonics App/helper/application_state.c
 	"application_state.h"
 
 1456214202 source:/user_data/CodeProjects/Mnuemonics App/helper/generate_items.c
@@ -2810,15 +2811,9 @@
 1439939447 source:/user_data/CodeProjects/Mnuemonics App/helper/window.c
 	"window.h"
 
-1456213805 source:/user_data/CodeProjects/Mnuemonics App/main.c
+1456246897 source:/user_data/CodeProjects/Mnuemonics App/main.c
 	<gtk/gtk.h>
 	"./helper/set_up_toolbar.h"
-	"./create_screens/create_configure_screen.h"
-	"./create_screens/create_study_screen.h"
-	"./create_screens/create_quiz_screen.h"
-	"./create_screens/create_score_screen.h"
 	"./helper/window.h"
-	"./helper/generate_items.h"
-	"./helper/utilities.h"
 	"./helper/application_state.h"
 

@@ -230,7 +230,7 @@ create_configure_screen (){
   data->grid = grid;
 
   GtkWidget *frame = gtk_frame_new ("");
-  gtk_stack_add_named (GTK_STACK (get_application_stack()), frame, "configure_screen");
+  add_screen_onto_gtk_stack(frame, "configure_screen");
   gtk_widget_set_halign (frame,GTK_ALIGN_CENTER);
   gtk_widget_set_valign (frame,GTK_ALIGN_CENTER);
   gtk_container_set_border_width (GTK_CONTAINER (frame), 15);
