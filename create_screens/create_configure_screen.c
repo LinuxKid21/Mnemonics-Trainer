@@ -73,6 +73,9 @@ check_and_shift (GtkWidget *widget,
   }
 
   settings->has_repeats = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (passed_data->check_button_reapeat_cards));
+  /* inverted. inverted the inverted to not be inverted!*/
+  if(settings->has_repeats == TRUE) settings->has_repeats = FALSE;
+  else settings->has_repeats = TRUE;
 
   /* make sure everything required is set */
   if (settings->order == OrderNone && (settings->item_type == ItemTypesSimpleWords ||

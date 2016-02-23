@@ -46,13 +46,15 @@ generate_order ()
 
 static gboolean check_for_doubles_words (int *random_list, int random_list_size, int possibilities_size)
 {
-  for (unsigned int i = 0;i < random_list_size; i++)
-    for (unsigned int j = 0;j < random_list_size; j++)
+  for (unsigned int i = 0;i < random_list_size; i++) {
+    for (unsigned int j = 0;j < random_list_size; j++) {
       if (i != j && random_list[i] == random_list[j])
       {
         random_list[i] = ((double)rand()/(double)RAND_MAX)*(double)possibilities_size;
         return TRUE;
       }
+    }
+  }
   return FALSE;
 }
 
@@ -116,7 +118,6 @@ generate_items_words (char *file_name, const int file_length, gboolean remove_do
       {
         items[x] = malloc (sizeof (char) * largest_word_size);
         strcpy(items[x++], word);
-//        printf("%i: %s\n",x,  items[x-1] );
       }
     }
     j++;
